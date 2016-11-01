@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    {{> head}}
+  </head>
+  <body>
+    {{> header}}
+
+    <main class="main blog">
+      <div class="container">
+        <h1 class="heading">Blog</h1>
+
+        <section class="list">
+          {{#posts}}
+            <article class="item">
+              <h2 class="item-title">
+                <a href="/blog/{{id}}">{{title}}</a>
+              </h2>
+              <p class="item-excerpt">
+                {{excerpt}}
+              </p>
+            </article>
+          {{/posts}}
+        </section>
+      </div>
+    </main>
+
+    {{> footer}}
+  </body>
+</html>
